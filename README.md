@@ -1,5 +1,4 @@
-# curso-hyperledger-fabric
-Curso de Hyperledger Fabric LatinoAmerica 2020
+# Curso de Hyperledger Fabric LatinoAmerica 2020
 
 Bienvenid@ a nuestro curso de desarrollador blockchain en Hyperledger Fabric ofrecido por Hyperledger Latinoamérica y Business Blockchain.
 
@@ -17,14 +16,14 @@ Las instrucciones para instalar el cliente de zoom estan aquí: https://zoom.us/
 El inicio del curso es el día Jueves 20  de Agosto del 2020  (Jueves y sábado). 
  
 Horario Jueves 
-Perú, México, Colombia, Ecuador 18:00 pm
-Chile, Bolivia 19:00 pm
-Argentina 20:00 horas
+- Perú, México, Colombia, Ecuador 18:00 pm
+- Chile, Bolivia 19:00 pm
+- Argentina 20:00 horas
 
 Horario sábados 
-Perú, México, Colombia, Ecuador 10:00 am
-Chile, Bolivia 11:00 am
-Argentina 12:00  horas
+- Perú, México, Colombia, Ecuador 10:00 am
+- Chile, Bolivia 11:00 am
+- Argentina 12:00  horas
  
 El horario de las clases están orientadas a no interrumpir  actividades laborales o personales de cada participante.
 
