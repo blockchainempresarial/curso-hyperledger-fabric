@@ -1,6 +1,6 @@
 # Curso de Hyperledger Fabric LatinoAmerica 2020
 
-Bienvenid@ a nuestro curso de desarrollador blockchain en Hyperledger Fabric ofrecido por Hyperledger Latinoamérica y Business Blockchain.
+Bienvenid@ a nuestro curso de desarrollador blockchain en Hyperledger Fabric ofrecido por [Hyperledger Latinoamérica](https://wiki.hyperledger.org/display/CP/Hyperledger+Latinoamerica "Hyperledger Latinoamérica") y [Business Blockchain](https://www.blockchainempresarial.com/ "Business Blockchain").
 
 Con el fin de gestionar correctamente su experiencia en el curso y certificación le pedimos lea detenidamente las siguientes instrucciones:
 
