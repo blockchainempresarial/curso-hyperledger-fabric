@@ -1,0 +1,42 @@
+# Copyright Business Blockchain www.blockchainempresarial.com. All Rights Reserved.
+# Autor: Ricardo Ruano, ricardo@blockchainempresarial.com
+# Date: 20-08-2020
+# SPDX-License-Identifier: Apache-2.0
+#
+OrdererOrgs:
+    - Name: Orderer
+      Domain: acme.com
+      EnableNodeOUs: true
+      Specs:
+        - Hostname: orderer
+          SANS:
+            - localhost
+PeerOrgs:
+    - Name: Org1
+      Domain: org1.acme.com
+      EnableNodeOUs: true
+      Template:
+        Count: 1
+        SANS:
+          - localhost
+      Users:
+        Count: 1
+    - Name: Org2
+      Domain: org2.acme.com
+      EnableNodeOUs: true
+      Template:
+        Count: 1
+        SANS:
+          - localhost
+      Users:
+        Count: 1
+    - Name: Org3
+      Domain: org3.acme.com
+      EnableNodeOUs: true    
+      Template:
+        Count: 1
+        SANS:
+          - localhost
+      Users:
+        Count: 1
+  
