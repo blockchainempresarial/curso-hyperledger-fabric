@@ -1,0 +1,29 @@
+# Copyright Business Blockchain www.blockchainempresarial.com. All Rights Reserved.
+# Autor: Ricardo Ruano, ricardo@blockchainempresarial.com
+# Date: 20-08-2020
+# SPDX-License-Identifier: Apache-2.0
+#
+
+version: '2'
+
+services:
+  peer-base:
+    image: hyperledger/fabric-peer:2.2.0
+    environment:
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      # the following setting starts chaincode containers on the same
+      # bridge network as the peers
+      # https://docs.docker.com/compose/networking/
+      # ---CHANGED---
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=acme-network_basic
+      - FABRIC_LOGGING_SPEC=INFO
+     # - FABRIC_LOGGING_SPEC=DEBUG
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_GOSSIP_USELEADERELECTION=true
+      - CORE_PEER_GOSSIP_ORGLEADER=false
+      - CORE_PEER_PROFILE_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: peer node start
