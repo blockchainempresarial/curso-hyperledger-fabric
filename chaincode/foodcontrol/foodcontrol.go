@@ -28,6 +28,8 @@ func (s *SmartContract) Set(ctx contractapi.TransactionContextInterface, foodId 
 
 	//Validaciones de sintaxis
 
+	//validaciones de negocio
+
 	food := Food{
 		Farmer:  farmer,
 		Variety: variety,
@@ -40,6 +42,28 @@ func (s *SmartContract) Set(ctx contractapi.TransactionContextInterface, foodId 
 	}
 
 	return ctx.GetStub().PutState(foodId, foodAsBytes)
+}
+
+func (s *SmartContract) Query(ctx contractapi.TransactionContextInterface, foodId string) (*Food, error) {
+
+	foodAsBytes, err := ctx.GetStub().GetState(foodId)
+
+	if err != nil {
+		return nil, fmt.Errorf("Failed to read from world state. %s", err.Error())
+	}
+
+	if foodAsBytes == nil {
+		return nil, fmt.Errorf("%s does not exist", foodId)
+	}
+
+	food := new(Food)
+
+	err = json.Unmarshal(foodAsBytes, food)
+	if err != nil {
+		return nil, fmt.Errorf("Unmarshal error. %s", err.Error())
+	}
+
+	return food, nil
 }
 
 func main() {
